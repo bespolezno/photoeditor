@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Фоторедактор</title>
+    <script src="assets/js/jquery.js" defer></script>
+    <script src="assets/js/jquery-ui.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+    <div class="title"><h1>Фоторедактор</h1></div>
+    <button class="compile">Сохранить и выгрузить</button>
+</header>
+<div class="main">
+    <div id="delete">
+        Вы точно хотите удалить данный элемент?
+    </div>
+    <div class="file-message">Загрузите файл</div>
+    <form enctype="multipart/form-data" id="form">
+        <input type="file" id="file" accept="image/png, image/jpeg, image/jpg">
+    </form>
+    <div class="main-image">
+        <div class="holder"></div>
+    </div>
+    <div class="sec">
+        <div class="label">Фильтры</div>
+        <div class="filters">
+            <div class="filter">
+                <label class="range">Сепия: <input id="sepia" type="range" min="0" max="100" value="0"></label>
+                <span class="val"><span class="change">0</span>%</span>
+            </div>
+            <div class="filter">
+                <label class="range">Яркость: <input id="brightness" type="range" min="0" max="200" value="100"></label>
+                <span class="val"><span class="change">100</span>%</span>
+            </div>
+            <div class="filter">
+                <label class="range">Контраст: <input id="contrast" type="range" min="0" max="200" value="100"></label>
+                <span class="val"><span class="change">100</span>%</span>
+            </div>
+            <div class="filter">
+                <label class="range">Ч/Б: <input id="grayscale" type="range" min="0" max="100" value="0"></label>
+                <span class="val"><span class="change">0</span>%</span>
+            </div>
+            <div class="filter">
+                <label class="range">Инверсия: <input id="invert" type="range" min="0" max="100" value="0"></label>
+                <span class="val"><span class="change">0</span>%</span>
+            </div>
+            <div class="filter">
+                <label class="range">Насыщенность: <input id="saturate" type="range" min="0" max="200" value="100"></label>
+                <span class="val"><span class="change">100</span>%</span>
+            </div>
+            <div class="filter">
+                <label class="range">Блюр: <input id="blur" type="range" min="0" max="100" value="0"></label>
+                <span class="val"><span class="change">0</span>пикс.</span>
+            </div>
+            <div class="filter">
+                <label class="range">Поворот цвета: <input id="hue-rotate" type="range" min="0" max="360" value="0"></label>
+                <span class="val"><span class="change">0</span>гр.</span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+            <div class="label">Палитра</div>
+            <div class="palette">
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/5OlLQLbz4qw.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/6NFhSXiJ0T0.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/39y8jwuW1eo.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/44lzYsFba3Q.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/80rh-ld0A9Q.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/-8yOgYVvz4I.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/a40TosA0cLA.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/bNfuilj3I4s.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/bZm98d-ffSM.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/GNL89RoQDp0.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/KIO5FR6qC0E.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/KvgzdfRaqvw.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/o3gNTI0TjhY.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/P2hFOdKF8v4.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/p4qRFAn9pTo.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/QNBqjShubjQ.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/RPonsjFpnOs.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/SFhanvo9_Zg.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/sUxqAo_8MZ8.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/xL6hCOmnKEA.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/Y_VGgoG3iUU.png" alt="sticker" class="s"></div>
+                <div class="sticker addable"><img class="cross" src="assets/img/cross.png" alt="cross"><img src="assets/img/stickers/yhmvlqwU_iI.png" alt="sticker" class="s"></div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

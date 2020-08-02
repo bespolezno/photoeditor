@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Consolas;
+}
+body {
+    overflow: hidden;
+}
+div {
+    box-sizing: padding-box;
+}
+header {
+    height: 50px;
+    background-color: darkmagenta;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.compile {
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    margin-right: 50px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.1) none;
+}
+.compile:hover {
+    background: rgba(0, 0, 0, 0.2) none;
+}
+.compile:active {
+    background: rgba(0, 0, 0, 0) none;
+}
+.main {
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    padding: 5px 5px 5px 50px;
+}
+footer {
+    height: 200px;
+    background-color: darkmagenta;
+    color: white;
+}
+.draggable {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.selected {
+    box-shadow: 0 0 20px yellow;
+    z-index: 100;
+}
+.right {
+    position: absolute;
+    width: 450px;
+    height: calc(100vh - 50px);
+    right: -400px;
+    top: 50px;
+    transition: right 1s;
+    background: white;
+}
+.right > .label {
+    background-color: darkmagenta;
+    color: white;
+    height: 100%;
+    font-size: 18px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    width: 50px;
+    float: left;
+}
+.right:hover {
+    right: 0;
+}
+.palette {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.sticker {
+    height: 75px;
+}
+.main-image {
+    position: relative;
+}
+.holder {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#m {
+    height: calc(100vh - 200px);
+}
+.cross {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    height: 40px;
+    width: 40px;
+}
+.s {
+    height: 100%;
+}
+.cross {
+    display: none;
+}
+.selected > .cross {
+    display: block;
+}
+#delete {
+    display: none;
+}
+.ui-dialog-titlebar {
+    background-color: darkmagenta;
+    color: white;
+}
+.ui-widget-overlay {
+    background: #aaaaaa;
+    opacity: .5;
+}
+.sec {
+    position: absolute;
+    left: 0;
+    bottom: -90%;
+    width: 470px;
+    height: calc(100vh - 50px);
+    transition: bottom 1s;
+    background-color: white;
+    color: darkmagenta;
+}
+.sec:hover {
+    bottom: -10%;
+}
+.sec > .label {
+    background-color: darkmagenta;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.filter {
+    padding: 5px;
+}
+.check {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: darkmagenta;
+    text-align: center;
+    vertical-align: top;
+}
+input[type=checkbox] {
+    width: 0;
+    height: 0;
+    user-focus: none;
+    cursor: pointer;
+}
+.mark {
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+}
+.check:hover > .mark {
+    opacity: 1;
+}
+input[type=checkbox]:checked + .check > .mark {
+    opacity: 1;
+}
+.range, .val {
+    color: #aaaaaa;
+}
+.changed > .range, .changed > .val, .changed > input::-webkit-slider-thumb {
+    color: darkmagenta;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: darkgray;
+    height: 25px;
+    width: 10px;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 180px;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+}
+#file {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+    z-index: 100;
+}
+.file-message {
+    font-size: 4rem;
+    color: darkmagenta;
+}
